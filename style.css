@@ -131,6 +131,9 @@ button {
     margin: 6px;
     gap: 11px;
   }
+  #card-id{
+    border: none;
+  }
 }
 
 
