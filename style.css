@@ -91,6 +91,7 @@ button {
 .counter-area-3 {
     
     margin: 50px 0 0;
+    padding-bottom: 70px;
 }
 .media-body img {
     width: 80px;
@@ -120,6 +121,70 @@ button {
     letter-spacing: 2px;
     font-weight: 500;
 }
+.about-section {
+  margin-top: 80px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.about_contents {
+  padding-right: 40px;
+  border-right: 2px solid #253060;
+  text-align: justify;
+}
+.sec-title {
+  margin-top: 0px;
+  margin-bottom: 0 !important;
+  font-weight: 600;
+  color: #253060;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "exo2";
+  font-size: 24px;
+}
+.h3-font {
+  font-weight: 100;
+  font-size: 35px;
+  font-family: "exo2";
+}
+.sec-text {
+  font-size: 16px;
+  line-height: 25px;
+  color: #565454;
+  text-align: start;
+}
+.about-contents {
+    padding-right: 40px;
+    border-right: 2px solid #253060;
+}
+.text-font-h {
+    color: #253060 !important;
+    margin: 0;
+}
+p {
+    font-family: "mukta", sans-serif;
+    margin: 0 0 13px 0;
+    color: #565454;
+    line-height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +198,11 @@ button {
   }
   #card-id{
     border: none;
+  }
+  .about-contents {
+    padding-right: 40px;
+    border-right: none;
+    text-align: justify;
   }
 }
 
