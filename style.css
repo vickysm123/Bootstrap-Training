@@ -132,7 +132,11 @@ button {
         }
 
 
-
+@media (max-width: 767px) {
+    .d-mb-none {
+        display: none;
+    }
+}
 
 
 
