@@ -76,18 +76,62 @@ button {
     clear: both;
     content: "";
 }
+.counter-card-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.counter-area {
+  margin: 50px 0 0;
+  padding-bottom: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: 1300px;
+}
+.counter-area-3 {
+    
+    margin: 50px 0 0;
+}
+.media-body img {
+    width: 80px;
+}
+.counter-card {
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid #bbb;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.counter-cards {
+  text-align: center;
+  padding: 20px;
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box-text {
+    font-size: 15px;
+    color: #161823;
+    line-height: 21px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
 
 
 
 
-
-
-
-
-
-
-
-
+@media (max-width:576px) {
+    .counter-card-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 6px;
+    gap: 11px;
+  }
+}
 
 
 
