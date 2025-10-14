@@ -115,11 +115,10 @@ button {
   align-items: center;
 }
 .box-text {
-    font-size: 15px;
-    color: #161823;
-    line-height: 21px;
-    letter-spacing: 2px;
-    font-weight: 500;
+    font-family: "mukta", sans-serif;
+    margin: 0 0 13px 0;
+    color: #565454;
+    line-height: 25px;
 }
 .about-section {
   margin-top: 80px;
@@ -162,7 +161,7 @@ button {
     color: #253060 !important;
     margin: 0;
 }
-p {
+.sec-text p{
     font-family: "mukta", sans-serif;
     margin: 0 0 13px 0;
     color: #565454;
