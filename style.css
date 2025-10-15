@@ -1062,6 +1062,22 @@ li {
   #club_house {
     padding: 0px 20px;
 }
+.constuction-video{
+  padding: 0px 20px;
+}
+.constuction-updates{
+  padding: 0px 20px;
+}
+.client-area-1{
+  padding-top: 3px;
+}
+.client-area-1 .align img {
+    width: 185%;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+}
 }
 
 @media (max-width: 768px) {
