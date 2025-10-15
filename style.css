@@ -919,14 +919,16 @@ margin-bottom: 20px !important;
     border: none;
   }
   .about-contents {
-    padding-right: 40px;
+    padding: 0px 20px;
     border-right: none;
     text-align: justify;
   }
+  .overflow-hidden{
+    padding-bottom: 0px;
+  }
   .about-candeur {
-    margin-top: -44px;
-    padding-top: 50px;
-    margin-bottom: 50px;
+ 
+    /* margin-bottom: 50px; */
   }
   .play-btn-content {
     width: 80%;
