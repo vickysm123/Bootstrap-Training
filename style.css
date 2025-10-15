@@ -1056,6 +1056,12 @@ li {
     font-family: "exo2";
     margin-bottom: 25px;
   }
+  #clubhouse_aminities{
+    margin-bottom: 20px;
+  }
+  #club_house {
+    padding: 0px 20px;
+}
 }
 
 @media (max-width: 768px) {
