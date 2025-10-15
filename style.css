@@ -990,6 +990,19 @@ iframe {
 }
 .mob-aling{
     display: grid!important;
+        margin-bottom: 248px;
+    padding: 0px 20px;
+}
+.vasthu_section{
+  padding: 0px 20px;
+}
+#displayImage{
+  width: 100%;
+          position: relative;
+        top: 323px;
+}
+.align-items-start{
+  flex-direction: column;
 }
  #row{
      display: grid;
