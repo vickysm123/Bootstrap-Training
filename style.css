@@ -1078,6 +1078,46 @@ li {
     margin-bottom: 40px;
     margin-left: 100px;
 }
+.footer-open-form {
+    margin: 0px;
+    margin-top: 13px;
+    margin-bottom: 75px;
+}
+#contact_us {
+    position: relative;
+    left: 0px;
+}
+.footer-wrapper {
+    padding: 0px 20px;
+}
+.about-logo a img {
+    margin-left: -36px;
+}
+.th-social {
+    margin-left: -15px;
+    margin-bottom: 25px;
+}
+.quick-links-list {
+    margin-left: -14px
+;
+}
+.text-white {
+    font-size: 16px;
+    margin-left: -22px;
+}
+.about-text {
+    text-align: start;
+    margin-left: -18px;
+}
+.footer_contact {
+    width: 136px;
+    margin-left: -12px;
+}
+.footer-layout2 .copyright-wrap .copyright-text {
+       font-size: 13px;
+    text-align: start;
+}
+
 }
 
 @media (max-width: 768px) {
