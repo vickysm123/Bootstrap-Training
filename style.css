@@ -92,6 +92,10 @@ button {
 .media-body img {
   width: 80px;
 }
+.about-section{
+    margin-top: 2px;
+    margin-bottom: 34px;
+}
 .counter-card {
   text-align: center;
   padding: 20px;
@@ -843,7 +847,7 @@ li{
     text-transform: uppercase;
     display: inline-block;
     position: relative;
-    right: 30%;
+    right: 36%;
     font-size: 20px
 }
 .section-title1 {
@@ -928,7 +932,15 @@ margin-bottom: 20px !important;
   }
   .about-candeur {
  
-    /* margin-bottom: 50px; */
+    margin-bottom: 2px;
+  }
+  .about-section{
+    margin-top: 0px;
+    padding: 0px 20px;
+  }
+  .space-bottom{
+    padding: 0px 20px;
+    padding-bottom: 45px;
   }
   .play-btn-content {
     width: 80%;
@@ -939,9 +951,10 @@ margin-bottom: 20px !important;
    padding: 51px;
 }
 .form-d{
-        display: grid
-;
+        display: grid;
     gap: 12px;
+    padding: 0px 20px;
+    margin-bottom: 22px;
 
 }
 .abt-form {
@@ -957,8 +970,16 @@ margin-bottom: 20px !important;
     border: none;
     border-radius: 0px;
     border-bottom: 1px solid #bbb;
-    width: 327px;
+    width: 274px;
     margin: 0;
+}
+.mb-5 {
+    margin-bottom: 3px!important;
+}
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+    margin-top: 24px;
 }
 #displayImage{
     width: 100%;
