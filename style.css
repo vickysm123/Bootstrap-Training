@@ -1058,6 +1058,9 @@ ease-out;
     font-size: 13px;
     bottom: 41px;
 }
+.nav-pills .nav-link.active{
+  width: 100%;
+}
 }
 
  @media (max-width: 768px) {
