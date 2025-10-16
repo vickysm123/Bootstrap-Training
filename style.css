@@ -19,6 +19,150 @@ button {
   cursor: pointer;
   border: none;
 }
+#kenytChatBubble.style1 #kenytBubbleContainer {
+    display: flex
+;
+    flex-direction: column;
+    width: auto;
+    position: absolute;
+    bottom: 120px;
+    z-index: 2147483645;
+    pointer-events: none;
+    margin: auto;
+}
+#kenytChatBubble.style1 {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    transition: background-color .7s 
+ease-in-out, box-shadow .5s 
+ease-in-out;
+    cursor: pointer;
+    display: flex
+;
+    right: 0;
+    margin-right: 20px;
+}
+.contact-button {
+    background: #253060;
+    color: #0b0c10;
+    padding: 25px;
+    height: 50px;
+    width: 50px;
+    top: 13rem;
+    right: 0;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 2px #253060, 0px 0px 0px 6px transparent;
+    z-index: 99;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+     animation: pulse-glow 1.5s infinite alternate;
+}
+.contact-button, .contact-button__icon, .dwn-button, .dwn-button__icon {
+    transition: all 0.5s 
+ease-in-out;
+}
+.dwn-button {
+    background: #253060;
+    color: #0b0c10;
+    padding: 25px;
+    height: 50px;
+    width: 50px;
+    top: 17rem;
+    right: 0;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 2px #253060, 0px 0px 0px 6px transparent;
+    z-index: 99;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+     animation: pulse-glow 1.9s infinite alternate;
+}
+.dwn-button::before, .contact-button::before {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: -15px;
+    left: -15px;
+    background-color: #253060;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    animation-fill-mode: both;
+    opacity: 0.6;
+    animation: pulse 1.8s 
+ease-out;
+    animation-iteration-count: infinite;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s 
+ease-in-out, background-color .15s 
+ease-in-out, border-color .15s 
+ease-in-out, box-shadow .15s 
+ease-in-out;
+
+
+}
+@keyframes pulse{
+  0% {
+    transform: scale(0);
+    opacity: 0;
+}
+25% {
+    transform: scale(0.3);
+    opacity: 1;
+}
+50% {
+    transform: scale(0.6);
+    opacity: .6;
+}
+75% {
+    transform: scale(0.9);
+    opacity: .3;
+}
+100% {
+    transform: scale(1);
+    opacity: 0;
+}
+}
+
+.dwn-button button img, .contact-button a img {
+    max-width: 30px;
+    width: 30px;
+    min-height: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
 
 .navbar-brand-left {
   margin-right: auto;
@@ -37,12 +181,13 @@ button {
   margin-right: 7px;
 }
 .nav-center {
-  margin: -35px;
+  margin: -10px;
   width: 60%;
 }
 .nav-item {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-family);
+  transition: transform 0.4s ease;
 }
 .nav-link {
   position: relative;
@@ -884,7 +1029,7 @@ li {
 .clubhouse {
   overflow: hidden;
   position: relative;
-  /* padding: 100px; */
+  padding: 100px;
 }
 
 @media (max-width: 991.98px) {
@@ -1062,10 +1207,10 @@ li {
   #club_house {
     padding: 0px 20px;
 }
-.constuction-video{
+.construction-video{
   padding: 0px 20px;
 }
-.constuction-updates{
+.construction-updates{
   padding: 0px 20px;
 }
 .client-area-1{

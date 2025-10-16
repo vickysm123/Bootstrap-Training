@@ -20,8 +20,20 @@
   />
 </head>
 <body>
+<section class="desktop-btns">
+<div class="position-fixed contact-button">
+<a href="">
+<img src="images/phone.png" alt="Contact now!">
+</a>
+</div>
+<div class="position-fixed dwn-button">
+<button type="button" class="btn btn-dwn" data-bs-toggle="modal" data-bs-target="#exampleModal-dwn" fdprocessedid="hhvf">
+<img src="images/download.png" alt="Download brochure">
+</button>
+</div>
+</section>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar sticky-top d-flex navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         
         <a class="navbar-brand navbar-brand-left" href="#">
@@ -374,19 +386,19 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
       <div class="col-12">
       <div class="d-flex align-items-start mob-aling">
         <div class="navs flex-column nav-pills me-3">
-          <button class="nav-link floor-btn active" id="" type="button" role="tab" onclick="changeImage('images/masterplan1.webp')">
+          <button class="nav-link floor-btn active" data-bs-toggle="navs" id="" type="button" role="tab" onclick="changeImage('images/masterplan1.webp',this);">
             Master Plan
           </button>
-          <button class="nav-link floor-btn " id="" type="button" role="tab" onclick="changeImage('images/tower-f-g2.webp')">
+          <button class="nav-link floor-btn " data-bs-toggle="nav-link" id="" type="button" role="tab" onclick="changeImage('images/tower-f-g2.webp',this)">
             3.1BHK
           </button>
-          <button class="nav-link floor-btn " id="" type="button" role="tab" onclick="changeImage('images/tower-f-g1.webp')">
+          <button class="nav-link floor-btn " data-bs-toggle="tab" id="" type="button" role="tab" onclick="changeImage('images/tower-f-g1.webp',this)">
             3 BHK
           </button>
-          <button class="nav-link floor-btn " id="" type="button" role="tab" onclick="changeImage('images/tower-f-g2 (1).webp')">
+          <button class="nav-link floor-btn " data-bs-toggle="tab" id="" type="button" role="tab" onclick="changeImage('images/tower-f-g2 (1).webp' ,this)">
             2.5BHK
           </button>
-          <button class="nav-link floor-btn " id="" type="button" role="tab" onclick="changeImage('images/tower-a1 (1).webp')">
+          <button class="nav-link floor-btn " data-bs-toggle="tab" id="" type="button" role="tab" onclick="changeImage('images/tower-a1 (1).webp' ,this)">
            2HK
           </button>
           <P class="text-center"><strong>Base Price ₹8,650/- Sft</strong></P>
@@ -519,20 +531,20 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
       </div>
     </div>
   </section>
-  <section class="construction-video overflow-hidden" id="">
+ <section class="construction-video overflow-hidden" id="">
 <div class = "container">
   <div class="row">
-    <div class="col-12 col-md-6 col-lg-5">
+    <div class="col-12 col-md-6 col-lg-6">
       <div class="conts-content">
         <div class="title-area text-center">
-          <h2 class="sec-title" id="sec_title">
+          <h2 class="sec-title">
             Glimpse of Construction Progress</h2>
             <p class="sec-text p-0 mb-30 mt-4" data-bs-ride="carousel" data-aos="fade-right" data-aos-duration="2000">At Candeur Lakescape, we proudly announce that our construction is not just progressing—it's flourishing. With each passing day, our vision for luxury living takes shape, rising majestically above the horizon of Hyderabad's skyline. Stay tuned for updates on our construction milestones. Your dream home is growing, with it, a new standard of luxury living in Hyderabad. Welcome to the future—welcome to Candeur Lakescape.</p>
 
       </div>
   </div>
 </div>
-<div class="col-12 col-md-6 col-lg-7">
+<div class="col-12 col-md-6 col-lg-6">
   <div class="vgallery aos-init aos-animate" data-bs-ride="carousel" data-aos="fade-left" data-aos-duration="2000">
   <a href="https://www.youtube.com/watch?v=B6YsJzS49lI">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/B6YsJzS49lI?si=A7Y325VHqy96oEd7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -692,6 +704,10 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
   </div>
 </div>
 </section>
+<!-- <div id="kenytBubbleContainer" class="kchannels-container">
+            <div class="kchannel-group">    
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+918111091114&amp;text=%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8d%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8e%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8c%e2%80%8c%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8c%e2%80%8c%e2%80%8d%e2%80%8c%e2%80%8b%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8eHi" id="kenytWhatsappBubble" class="kchannel-icon"><span class="khighlight-background" style="background-color: rgb(0, 217, 95);"></span><img src="https://www.kenyt.ai/botapp/api/botsetup/getimage?imagetype=whatsappbubble-icon&amp;botid=26629211"></a></div>
+        </div> -->
 <footer class="footer-wrapper footer-layout2 bg-white backgrnd-footer">
 <div class="container">
 <div class="footer-wrap">
@@ -946,6 +962,13 @@ $(document).ready(function(){
       }
     });
     </script> -->
-    
+    <script>
+function changeImage(imgSrc, btn) {
+  document.getElementById('displayImage').src = imgSrc;  
+  document.querySelectorAll('.floor-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
 </body>
 </html>
