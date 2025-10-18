@@ -43,27 +43,51 @@
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
             <span class="navbar-toggler-icon"></span>
         </button>       
-        <div class="nav-center d-none d-lg-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><img src="images/a1.png" alt="images" loading="lazy" class="nav-img">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><img src="images/h1.png" alt="images" loading="lazy" class="nav-img">Walkthrough</a>
-                </li>
-                <li class="nav-item">
-                   <a class="nav-link" aria-current="page" href="#"><img src="images/h3.png" alt="images" loading="lazy" class="nav-img">Amenities</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><img src="images/h2.png" alt="images" loading="lazy" class="nav-img">Floor Plans</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"><img src="images/h4.png" alt="images" loading="lazy" class="nav-img">Construction Process</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><img src="images/h5.png" alt="images" loading="lazy" class="nav-img">Contact Us</a>
-                </li>
-            </ul>
+        <div class="main-menu d-none d-lg-inline-block">
+            <ul>
+                <li class="menu-item-has-children">
+<a href="#about-candeur">
+<img src="images/a1.png" alt="">
+<p>About Us</p>
+</a>
+</li>
+<li class="menu-item-has-children">
+<a href="#walkthrough">
+<img src="images/h1.png" alt="">
+<p>Walkthrough</p>
+</a>
+</li>
+
+<li class="menu-item-has-children">
+<a href="#floor-plan">
+<img src="images/h3.png" alt="">
+<p>Floor Plan</p>
+</a>
+</li>
+<!-- <li class="menu-item-has-children">
+<a href="#amenities">
+<img src="assets/img/icon/h4.png" alt="">
+<p>Location Highlights</p>
+</a>
+</li> -->
+<li class="menu-item-has-children">
+<a href="#club_house">
+<img src="images/h4.png" alt="">
+<p>Amenities</p>
+</a>
+</li>
+<li class="menu-item-has-children"><a href="#construction">
+<img src="images/h2.png" alt="">
+<p>Construction Progress</p>
+</a></li>
+<li class="menu-item-has-children">
+<a href="#contact-us">
+<img src="images/h5.png" alt="">
+<p>Contact Us</p>
+</a>
+</li>
+</ul>
+
         </div>        
         <a class="navbar-brand navbar-brand-right d-none d-lg-block" href="#">
             <img src="images/logo2.png" alt="Right Logo" width="202px" height="54px">
@@ -334,7 +358,7 @@
     </div>
   </div>
 </section>
-<section class="walkthrough-new">
+<section class="walkthrough-new" id="walkthrough">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-6 col-lg-6">
@@ -361,7 +385,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
 </div>
   </div> 
 </section>
-<section class="vasthu_section">
+<section class="vasthu_section" id="floor-plan">
       <div class="container">
         <h5 class="text">ELEVATE YOUR LIVING WITH</h5>
         <h3 class="sub_text">Vasthu-Inspired Floor Plans</h3>
@@ -552,7 +576,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
   </div>
 </div>
 </section>
-<section class="construction-updates">
+<section class="construction-updates" id="construction">
   <div class="container space">
     <div class="row">
       <div class="col-lg-12">
@@ -648,7 +672,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
   </div>
 </div>
 
-<section class="overflow-hidden contact space">
+<section class="overflow-hidden contact space" id="contact-us">
   <div class="container">
     <div class="row justify-content-lg-between">
       <div class="col-12 col-md-5 col-lg-5">
@@ -835,9 +859,14 @@ Copyright © 2025 | Candeur Constructions Pvt.Ltd All rights reserved. | Powered
 </div>
 </footer>
 
+ <div class="back-to-top" id="backToTop">
+  <span> <i class="fas fa-arrow-up"></i
+    ></span>
+</div>
 
-
-
+<div class="back-to-whatsapp" id="backToWhatsapp">
+  <span><a href=""><img src="images/whatsappbubble-icon.png" alt="whatsapp" loading="lazy" style="width:40px ;position: relative ; z-index:9999;"></a></span>
+</div>
 
 
 
@@ -969,6 +998,25 @@ function changeImage(imgSrc, btn) {
   btn.classList.add('active');
 }
 </script>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    // Show after scrolling 200px
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+  </script>
 
 </body>
 </html>
