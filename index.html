@@ -1157,5 +1157,15 @@ function toggleReadMore() {
   data-bot="26629211" 
   defer>
 </script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 100,
+  disable: window.innerWidth < 768
+});
+window.addEventListener('load', () => AOS.refresh());
+</script>
+
   </body>
 </html>
