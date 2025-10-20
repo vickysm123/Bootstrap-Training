@@ -1511,6 +1511,10 @@ li {
     font-size: 13px;
     text-align: start;
   }
+  .vgallery{
+    width: 100%;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 768px) {
