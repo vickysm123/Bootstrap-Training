@@ -30,9 +30,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root {
-  --primary-color: #0d6efd;
-  --font-family: "mukta", sans-serif;
-  --transition-speed: 0.3s;
+  --theme-color: #1c2d37;
+  --theme-color2: #eed26e;
+  --title-color: #0d0d0c;
+  --title-dark: #364440;
+  --body-color: #565454;
+  --smoke-color: #156c9f66;
+  --smoke-color2: #666666;
+  --black-color: #000000;
+  --black-color2: #1b1b1b;
+  --black-color3: #1a1a1a;
+  --gray-color: li;
+  --white-color: #ffffff;
+  --light-color: #a4b5ba;
+  --yellow-color: #e2b93b;
+  --success-color: #27ae60;
+  --error-color: #eb5757;
+  --th-border-color: #cdcdcd;
+  --th-border-color2: #e6e6e6;
+  --title-font: "Outfit", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1296px;
+  --container-gutters: 24px;
+  --section-space: 55px;
+  --section-space-mobile: 25px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 5s;
+  --th-body-background: #ffffff;
 }
 
 body {
@@ -221,9 +246,14 @@ button {
   opacity: 0;
 }
 .navbar {
-  padding: 11px 5px;
+  transition: transform 0.4s ease, background 0.3s ease;
+  transform: translateY(10);
+  box-shadow: 3px 5px 4px -4px #212e4a;
+  padding: 7px 5px;
+  background: var(--white-color);
   box-shadow: 3px 5px 4px -4px #212e4a;
 }
+
 .menu-item-has-children a img {
   width: 22px;
   margin-right: 5px;
@@ -281,6 +311,11 @@ button {
   transform: scaleY(1);
   z-index: 9;
 }
+.navbar .main-menu > ul > li > a:hover {
+  color: var(--theme-color);
+  text-shadow: 0px 0px 0px var(--theme-color), 0px 0px 0px var(--theme-color),
+    0px 0px 0px var(--theme-color);
+}
 .me-3 {
   width: 202px;
   height: 67px;
@@ -313,7 +348,8 @@ button {
 }
 .counter-area-3 {
   margin: 50px 0 0;
-  padding-bottom: 70px;
+  /* padding-bottom: 70px; */
+  padding: 24px;
 }
 .media-body img {
   width: 80px;
@@ -349,7 +385,8 @@ button {
 .about-candeur {
   /* margin-top: 40px;
   padding-top: 50px; */
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  margin: 0px;
 }
 
 .about_contents {
@@ -418,6 +455,7 @@ button {
   text-decoration: none;
   overflow: hidden;
   transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .shine-btn::before {
@@ -481,9 +519,14 @@ ul {
   color: #253060;
   text-decoration: underline;
   font-weight: 550;
+  cursor: pointer;
+  margin-left: 14px;
+}
+.content-box {
+  margin-top: 0px;
 }
 .about-section {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .form-d {
   display: flex;
@@ -522,6 +565,46 @@ input {
   padding-bottom: 50px;
   margin-top: 40px;
 }
+/* Fix for GLightbox icons not visible */
+.glightbox-clean .gprev,
+.glightbox-clean .gnext,
+.glightbox-clean .gclose {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.glightbox-clean .gprev,
+.glightbox-clean .gnext {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.glightbox-clean .gprev:hover,
+.glightbox-clean .gnext:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.glightbox-clean .gclose {
+  color: white;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+.glightbox-clean .gdesc-inner {
+    padding: 22px 20px;
+    display: none;
+}
+
 .walkthrough-new {
   position: relative;
   height: 115vh;
@@ -1099,9 +1182,15 @@ li {
   width: 80%;
 }
 #club_house {
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
+  /* margin: 64px; */
 }
-
+.content-box {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
 .font_relative {
   position: relative;
   right: 53px;
@@ -1186,6 +1275,12 @@ li {
   visibility: visible;
   transform: translateY(0);
 }
+.vgallery {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 72px;
+}
+
 
 @media (max-width: 991.98px) {
   .nav-center {
@@ -1429,3 +1524,16 @@ li {
     font-size: 0.8rem;
   }
 }
+@media only screen and (max-height: 465px) {
+    #chatbox-container {
+        position: fixed;
+        bottom: 0;
+        height: 100%;
+        box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .23);
+        transition: all .5s 
+ease-in-out;
+    }
+  }
+
+
+  

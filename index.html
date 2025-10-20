@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="img" href="images/about_1_3.webp">
     <title>Lakescape</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -18,6 +19,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
   />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
 </head>
 <body>
 <section class="desktop-btns">
@@ -257,8 +263,18 @@
               </div>
             </div>
           </div>
+
 <div class="btn-wrap justify-content-center space-top">
-           <a href="#" class="shine-btn">Read more →</a>
+
+  <div class="content-box">
+  <p id="text">   
+    <span id="moreText" style="display:none;">
+     The Candeur Group's Legacy
+     Elevating modern living, Candeur Group has planted its flag in Bangalore with five landmark creations and is now continuing its quest for creating quality residential landmarks in Hyderabad. Our relentless growth and steadfast dedication reflect our quest for unmatched excellence in the real estate arena.
+    </span>
+  </p>
+           <a class="shine-btn" id="readMoreBtn" onclick="toggleReadMore()">Read more →</a>
+          </div>
           </div>
     </div>
 </section>
@@ -315,7 +331,7 @@
                 pursuit of excellence in real estate.
               </p>
        
-        <a href  class="read-more" onclick="myClick(event)">Read More</a>
+        <a class="read-more"  id="read-more-btn" onclick="myClick(event)">Read More</a>
       </div>
     </div>
   </section>
@@ -427,13 +443,20 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
           </button>
           <P class="text-center"><strong>Base Price ₹8,650/- Sft</strong></P>
         </div>
-        <div class="tab-content w-100">
-          <div class="tab-pane fade show active">
-            <a href="images/masterplan.webp" class="popup-image">
-              <img src="images/masterplan1.webp" id="displayImage" alt="masterplan" loading="lazy">
-            </a>
-          </div>
-        </div>
+<div class="tab-content w-100">
+  <div class="tab-pane fade show active" id="floorplans">
+    <a href="images/masterplan1.webp" class="glightbox" data-gallery="floorplans" data-title="Master Plan">
+      <img src="images/masterplan1.webp" id="displayImage" loading="lazy" style="width:100%;border-radius:10px;">
+    </a>
+
+    <!-- Hidden images in same gallery -->
+    <a href="images/tower-f-g2.webp" class="glightbox" data-gallery="floorplans" data-title="3.1 BHK"></a>
+    <a href="images/tower-f-g1.webp" class="glightbox" data-gallery="floorplans" data-title="3 BHK"></a>
+    <a href="images/tower-f-g2 (1).webp" class="glightbox" data-gallery="floorplans" data-title="2.5 BHK"></a>
+    <a href="images/tower-a1 (1).webp" class="glightbox" data-gallery="floorplans" data-title="2 BHK"></a>
+  </div>
+</div>
+
       </div>
       </div>
       <div class="btn-wrap justify-content-center">
@@ -504,11 +527,11 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         Clubhouse Amenities [27]
         </h5>
         <div class="owl-carousel owl-theme clubhouse-carousel">
-      <div class="item"><img src="images/a1.webp"><div class="caption">Indoor Badminton Court</div></div>
-      <div class="item"><img src="images/a2.webp"><div class="caption">Day Care</div></div>
-      <div class="item"><img src="images/a20.webp"><div class="caption">Gym</div></div>
-      <div class="item"><img src="images/a20.webp"><div class="caption">Yoga Lawn</div></div>
-      <div class="item"><img src="images/a22.webp"><div class="caption">Spa</div></div>
+      <div class="item"><img src="images/a23.webp"><div class="caption">Indoor Badminton Court</div></div>
+      <div class="item"><img src="images/a24.webp"><div class="caption">Day Care</div></div>
+      <div class="item"><img src="images/a25.webp"><div class="caption">Gym</div></div>
+      <div class="item"><img src="images/a26.webp"><div class="caption">Yoga Lawn</div></div>
+      <div class="item"><img src="images/a27.webp"><div class="caption">Spa</div></div>
     </div>
     </div>
   </div>
@@ -521,8 +544,8 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         </h5>
         <div class="owl-carousel owl-theme clubhouse-carousel">
       <div class="item"><img src="images/a1.webp"><div class="caption">Indoor Badminton Court</div></div>
-      <div class="item"><img src="images/a2.webp"><div class="caption">Day Care</div></div>
-      <div class="item"><img src="images/a20.webp"><div class="caption">Gym</div></div>
+      <div class="item"><img src="images/a28.webp"><div class="caption">Day Care</div></div>
+      <div class="item"><img src="images/a29.webp"><div class="caption">Gym</div></div>
       <div class="item"><img src="images/a20.webp"><div class="caption">Yoga Lawn</div></div>
       <div class="item"><img src="images/a22.webp"><div class="caption">Spa</div></div>
     </div>
@@ -568,8 +591,8 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
       </div>
   </div>
 </div>
-<div class="col-12 col-md-6 col-lg-6">
-  <div class="vgallery aos-init aos-animate" data-bs-ride="carousel" data-aos="fade-left" data-aos-duration="2000">
+<div class="col-12 col-md-6 col-lg-6" data-bs-ride="carousel" data-aos="fade-left" data-aos-duration="2000">
+  <div class="vgallery aos-init aos-animate" >
   <a href="https://www.youtube.com/watch?v=B6YsJzS49lI">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/B6YsJzS49lI?si=A7Y325VHqy96oEd7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </a>  
@@ -864,9 +887,9 @@ Copyright © 2025 | Candeur Constructions Pvt.Ltd All rights reserved. | Powered
     ></span>
 </div>
 
-<div class="back-to-whatsapp" id="backToWhatsapp">
+<!-- <div class="back-to-whatsapp" id="backToWhatsapp">
   <span><a href=""><img src="images/whatsappbubble-icon.png" alt="whatsapp" loading="lazy" style="width:40px ;position: relative ; z-index:9999;"></a></span>
-</div>
+</div> -->
 
 
 
@@ -959,15 +982,25 @@ $(document).ready(function(){
 });
 </script>
 <script>
-  // hide initially
-  var myElement = document.querySelector('.readElements');
+  const myElement = document.querySelector('.readElements');
+  const myButton = document.getElementById('read-more-btn');
+
+  // hide the content initially
   myElement.style.display = 'none';
 
   function myClick(event) {
-    event.preventDefault(); // ✅ use the event object
-    myElement.style.display = 'block'; // show element when clicked
+    event.preventDefault();
+
+    if (myElement.style.display === 'none') {
+      myElement.style.display = 'block';
+      myButton.textContent = 'Read Less';
+    } else {
+      myElement.style.display = 'none';
+      myButton.textContent = 'Read More';
+    }
   }
-  </script>
+</script>
+
   <script>
     
     function changeImage(imageSrc) {
@@ -992,11 +1025,15 @@ $(document).ready(function(){
     });
     </script> -->
     <script>
-function changeImage(imgSrc, btn) {
-  document.getElementById('displayImage').src = imgSrc;  
-  document.querySelectorAll('.floor-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+function changeImage(imageSrc, element) {
+  document.getElementById("displayImage").src = imageSrc;
+
+  // Update active button styling
+  const buttons = document.querySelectorAll(".floor-btn");
+  buttons.forEach(btn => btn.classList.remove("active"));
+  element.classList.add("active");
 }
+
 </script>
 <script>
   const backToTopButton = document.getElementById("backToTop");
@@ -1017,6 +1054,108 @@ backToTopButton.addEventListener("click", () => {
   });
 });
   </script>
+<script>
+  const navbar = document.querySelector(".navbar");
+let lastScrollY = window.scrollY;
+let hideTriggered = false; // to track initial hide
+let showTriggered = false; // to track when it comes back
 
-</body>
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  // Add background and shadow after small scroll
+  if (currentScroll > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+
+  // Hiding logic (scrolling down)
+  if (currentScroll > lastScrollY && currentScroll > 50) {
+    if (!hideTriggered) {
+      // First, hide navbar smoothly
+      navbar.style.transform = "translateY(-100%)";
+      hideTriggered = true;
+      showTriggered = false;
+    }
+
+    // After scrolling down further (e.g., 250px), show navbar again
+    if (currentScroll > 250 && !showTriggered) {
+      setTimeout(() => {
+        navbar.style.transform = "translateY(0)";
+        showTriggered = true;
+      }, 150); // small delay for smoother comeback
+    }
+  }
+
+  // If user goes back near top, reset everything
+  if (currentScroll < 50) {
+    navbar.style.transform = "translateY(0)";
+    hideTriggered = false;
+    showTriggered = false;
+  }
+
+  lastScrollY = currentScroll;
+});
+
+</script>
+<script>
+function toggleReadMore() {
+  const moreText = document.getElementById("moreText");
+  const btn = document.getElementById("readMoreBtn");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    btn.textContent = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    btn.textContent = "Read More";
+  }
+}
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true,
+  });
+</script>
+
+<!-- <div id="kenytChatBubble" class="unreadcount style1 position-right" style="color: rgb(255, 255, 255);" data-unreadcount="3">
+        <div id="kenytBubbleContainer" class="kchannels-container">
+            <div class="kchannel-group">    
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=+918111091114&amp;text=%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8b%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8d%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8c%e2%80%8b%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8e%e2%80%8d%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8e%e2%80%8b%e2%80%8c%e2%80%8b%e2%80%8d%e2%80%8b%e2%80%8bHi" id="kenytWhatsappBubble" class="kchannel-icon kanimate"><span class="khighlight-background" style="background-color: rgb(0, 217, 95);"></span><img src="https://www.kenyt.ai/botapp/api/botsetup/getimage?imagetype=whatsappbubble-icon&amp;botid=26629211"></a></div>
+        </div>
+
+        <div id="messageWrapperBox" class="kpopup-container chatWithUsMessageWrapper ktext-color k-hide" style="color: rgb(0, 0, 0);">
+            <div class="kpopup-text chatWithUsMessage" style="min-width: 88px;"><p>Hello There 👋, chat with us!</p></div>
+            <button id="chatNowBtn" class="kprimary-color" style="color: rgb(37, 150, 190);" fdprocessedid="jip1cc">Chat Now</button>
+        </div>
+        <div class="kbubble-container kprimary-bg kprimary-border" style="background-color: rgb(37, 150, 190); border-color: rgb(37, 150, 190);">
+            <div id="bubbleTail"></div>
+            <div class="img-container">
+            <img src="https://www.kenyt.ai/botapp/api/botsetup/getimage?imagetype=chatbubble-icon&amp;botid=26629211"></div>
+        </div>
+        <div class="kconnectors-container kprimary-bg kprimary-border" style="background-color: rgb(37, 150, 190); border-color: rgb(37, 150, 190);">
+            <div id="krazorpay-btn" class="krazorpay-btn k-hide connector">
+            </div>
+
+            <div id="kcashfree-btn" class="kcashfree-btn k-hide connector">
+            </div>
+        </div>
+    </div>
+    <div id="chatbox-container" class="realestateassistant position-right style1"><iframe id="kenytChatWindow" allow="geolocation; microphone; camera" allowfullscreen="" src="https://www.kenyt.ai/botapp/ChatbotUI/ChatWindow?v=159&amp;botid=26629211&amp;origin=https%3A%2F%2Flakescapebycandeur.com%2Fultra-luxury-gated-community-apartments-in-kondapur-hyderabad%2F%23about-candeur&amp;enablePortal=false&amp;enableHomePortal=false&amp;enableMessagePortal=false&amp;test=0&amp;hash=-884569966&amp;setuserdataforbot=false&amp;hideChatHistory=false&amp;enableMessageFeedback=false&amp;forms=&amp;kenytStartIntent=null&amp;data-bot=26629211"></iframe><div id="kenytPoweredBy"><span>Powered By <a href="https://www.kenyt.ai" tabindex="-1">Kenyt.AI</a></span></div></div> -->
+
+<script 
+  src="https://www.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" 
+  data-bot="26629211" 
+  defer>
+</script>
+  </body>
 </html>
