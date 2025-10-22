@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="shortcut icon" type="img" href="images/about_1_3.webp">
     <title>Lakescape</title>
     <link rel="stylesheet" href="style.css">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sJBJWJLcMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -24,8 +25,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 
+<!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+  <div id="progress-bar"></div>
 <section class="desktop-btns">
 <div class="position-fixed contact-button">
 <a href="">
@@ -39,16 +45,17 @@
 </div>
 </section>
 
-<nav class="navbar sticky-top d-flex navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
     <div class="container-fluid">
-        
+        <div class="col-lg-2 col-md-w">
         <a class="navbar-brand navbar-brand-left" href="#">
-            <img src="images/lakescape-logo.png" alt="Left Logo" width="202px" height="67px">
+            <img src="images/lakescape-logo.png" alt="Left Logo">
         </a>
-
+</div>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
             <span class="navbar-toggler-icon"></span>
-        </button>       
+        </button>   
+       <div class="col-lg-8 col-md-w main-menu-d">    
         <div class="main-menu d-none d-lg-inline-block">
             <ul>
                 <li class="menu-item-has-children">
@@ -70,12 +77,7 @@
 <p>Floor Plan</p>
 </a>
 </li>
-<!-- <li class="menu-item-has-children">
-<a href="#amenities">
-<img src="assets/img/icon/h4.png" alt="">
-<p>Location Highlights</p>
-</a>
-</li> -->
+
 <li class="menu-item-has-children">
 <a href="#club_house">
 <img src="images/h4.png" alt="">
@@ -93,13 +95,78 @@
 </a>
 </li>
 </ul>
-
-        </div>        
+</div>
+        </div>    
+        <div class="col-lg-2 col-md-w">    
         <a class="navbar-brand navbar-brand-right d-none d-lg-block" href="#">
-            <img src="images/logo2.png" alt="Right Logo" width="202px" height="54px">
+            <img src="images/logo2.png" alt="Right Logo">
         </a>
     </div>
+    </div>
 </nav>
+
+<!-- <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+  <div class="container-fluid align-items-center justify-content-between">
+
+   
+    <a class="navbar-brand" href="#">
+      <img src="images/lakescape-logo.png" alt="Left Logo" class="img-fluid" style="max-height: 60px;">
+    </a>
+
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="d-none d-lg-flex flex-grow-1 justify-content-center main-menu">
+      <ul>
+         <li class="menu-item-has-children">
+<a  class="nav-link text-center" href="#about-candeur">
+<img src="images/a1.png" alt="">
+<p>About Us</p>
+</a>
+</li>
+        <li class="menu-item-has-children">
+          <a class="nav-link text-center" href="#walkthrough">
+            <img src="images/h1.png" alt="">
+            <p>Walkthrough</p>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a class="nav-link text-center" href="#floor-plan">
+            <img src="images/h3.png" alt="">
+            <p>Floor Plan</p>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a class="nav-link text-center" href="#club_house">
+            <img src="images/h4.png" alt="">
+            <p>Amenities</p>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a class="nav-link text-center" href="#construction">
+            <img src="images/h2.png" alt="">
+            <p>Construction Progress</p>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a class="nav-link text-center" href="#contact-us">
+            <img src="images/h5.png" alt="">
+            <p>Contact Us</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+   
+    <a class="navbar-brand d-none d-lg-block" href="#">
+      <img src="images/logo2.png" alt="Right Logo" class="img-fluid" style="max-height: 55px;">
+    </a>
+
+  </div>
+</nav> -->
+
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="sidebarOffcanvasLabel">
@@ -132,6 +199,8 @@
         </ul>
     </div>
 </div>
+
+
 <div id="carouselExampleFade" class="carousel slide carousel-fade d-mb-none" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -214,7 +283,9 @@
             <div class="about-contents">
                 <h5 class="sec-title">About</h5>
               <h3 class="h3-font">Candeur Group</h3>
-              <p class="sec-text p-0 mb-30">
+              <p class="sec-text p-0 mb-10" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                 Having planted our flag in
                 <b class="font_size_b">Bangalore</b> with five landmark
                 creations, we are continuing our quest for creating quality
@@ -387,13 +458,13 @@
        > <image src="images/play.webp" alt="image"></a>
     </div>
     <a href="" class="iframe-link" width="560" heigth="315">
-      <p class="ply-1">
+      <p class="ply-1 ">
         <img src="images/maximize (1).webp" alt="zoom" loading="lazy" class="zoom-in" width="18" height="18">        
                Expand Your View for Ultimate Luxury!
       </p>
     </a>
-  <p class="ply-1">    
-The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
+  <p class="ply-1 typing">    
+The Key to <span class="sp2 typing">Grandeur</span><br>Revealing the Exceptional
   </p>
   </div>
     </div>
@@ -405,7 +476,8 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
       <div class="container">
         <h5 class="text">ELEVATE YOUR LIVING WITH</h5>
         <h3 class="sub_text">Vasthu-Inspired Floor Plans</h3>
-        <p class="sec_text">
+        <p class="sec_text" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
           Step into a world where every day begins with the lake's serene
           beauty. Nestled in the heart of Kondapur, Candeur Lakescape invites
           you to indulge in the pinnacle of luxury living. Discover
@@ -461,7 +533,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
       </div>
       <div class="btn-wrap justify-content-center">
         <div class="btn-wrap justify-content-center space-top">
-           <a href="#" class="shine-btn">Download Brocher →</a>
+           <a href="#" class="shine-btn">Download Brochure →</a>
       </div>
     </section>
     <section class="locc">
@@ -471,7 +543,8 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         <div class="title-area mb-20 text-center">
           <h2 class="sec-title" id="sec_title">Location Highlights</h2>
         </div>
-        <p class="sec-text pt-10 pl-0 mb-30">
+        <p class="sec-text pt-10 pl-0 mb-30" data-aos="fade-up"
+     data-aos-duration="3000">
           <b>Experience unparalleled elegance at Hyderabad's premier lakeside address.</b> Your search for the perfect home ends at 
           <b>Candeur Lakescape in Kondapur,</b> just minutes from IT corridors like Gachibowli, Financial District, Hitec City. Ideally connected via the Outer Ring Road (ORR), this community offers seamless access to every part of the city. With international schools, colleges, hospitals, retail malls, the airport, and railway station nearby, it’s a location that truly enhances convenience. If you’re looking for 
           <b>3 BHK flats for sale near Gachibowli, 3 BHK flats for sale near Hitec City, 3 BHK flats for sale near Financial District, 3 BHK flats for sale near Tellapur. Candeur Lakescape</b>
@@ -479,38 +552,33 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         </p>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-      <div class="accordion accordion-flush" id="accordionFlushExample">
+     <div class="accordion">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        HEALTH CARE
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+    <button class="accordion-header">Health Care</button>
+    <div class="accordion-content">
+      <p>This is the content for section 1.</p>
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        EDUCATION
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    <button class="accordion-header">IT Corridors</button>
+    <div class="accordion-content">
+      <p>This is the content for section 2.</p>
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        IT CORRIDOR
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    <button class="accordion-header">Education</button>
+    <div class="accordion-content">
+      <p>This is the content for section 3.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-header">Entertainment & Shopping</button>
+    <div class="accordion-content">
+      <p>This is the content for section 3.</p>
     </div>
   </div>
 </div>
+
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15548.064640238352!2d77.58786199057614!3d13.034642801529484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17a295d80a47%3A0x1a3ccbf328b14759!2sHebbal%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1759927161016!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -593,9 +661,22 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
 </div>
 <div class="col-12 col-md-6 col-lg-6" data-bs-ride="carousel" data-aos="fade-left" data-aos-duration="2000">
   <div class="vgallery aos-init aos-animate" >
-  <a href="https://www.youtube.com/watch?v=B6YsJzS49lI">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/B6YsJzS49lI?si=A7Y325VHqy96oEd7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </a>  
+  <a href="https://www.youtube.com/watch?v=B6YsJzS49lI" class="iframe-link" target="_blank">
+
+<!--<video autoplay muted loop>
+<source src="assets/img/con.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>-->
+
+<video poster="" style="max-width: 100%;
+    height: auto;
+    width: auto;">
+  <source src="images/_con.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+</a> 
   </div>
 </div>
 </section>
@@ -611,23 +692,29 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         </div>
       </div>
       <div class="col-12 col-md-12 col-lg-12">
-   <div class="owl-carousel owl-theme progress-carousel" >
-      <div class="item" data-bs-ride="carousel" data-aos="zoom-in" data-aos-duration="2000">
-        <img src="images/construction-dec-10-1.webp" alt="">
-        
-      </div>
-      <div class="item" data-bs-ride="carousel" data-aos="zoom-in" data-aos-duration="2000">
-        <img src="images/construction-dec-12-1.webp" alt="">
-        
-      </div>
-      <div class="item" data-bs-ride="carousel" data-aos="zoom-in" data-aos-duration="2000">
-        <img src="images/construction-dec-5-1.webp" alt="">
-        
-      </div>
-      <div class="item" data-bs-ride="carousel" data-aos="zoom-in" data-aos-duration="2000">
-        <img src="images/construction-dec-8-1.webp" alt="">
-        
-      </div>
+   <div class="owl-carousel owl-theme progress-carousel">
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000">
+    <a href="images/construction-dec-10-1.webp" data-fancybox="gallery">
+      <img src="images/construction-dec-10-1.webp" alt="">
+    </a>
+  </div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000">
+    <a href="images/construction-dec-12-1.webp" data-fancybox="gallery">
+      <img src="images/construction-dec-12-1.webp" alt="">
+    </a>
+  </div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000">
+    <a href="images/construction-dec-5-1.webp" data-fancybox="gallery">
+      <img src="images/construction-dec-5-1.webp" alt="">
+    </a>
+  </div>
+  <div class="item" data-aos="zoom-in" data-aos-duration="2000">
+    <a href="images/construction-dec-8-1.webp" data-fancybox="gallery">
+      <img src="images/construction-dec-8-1.webp" alt="">
+    </a>
+  </div>
+</div>
+
     </div>
       </div>
     </div>
@@ -642,7 +729,10 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         <h2 class="sec-title">BANKS</h2>
       </div>
     </div>
-    <div class="client-logos">
+    <div class="client-logos"  data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
       <div class="row" id="row">
         <div class=" col-6 col-sm-4 col-md-2 col-lg-2 w-19 align">
          <img src="images/SBI.webp" alt="" loading="lazy">
@@ -700,7 +790,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
     <div class="row justify-content-lg-between">
       <div class="col-12 col-md-5 col-lg-5">
         <div class="iframe-link">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.443589596887!2d78.33574!3d17.478328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93c7c236b2c7%3A0x25afca04b8cd2eeb!2sCandeur%20Lakescape!5e0!3m2!1sen!2sin!4v1760000158545!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.443589596887!2d78.33574!3d17.478328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93c7c236b2c7%3A0x25afca04b8cd2eeb!2sCandeur%20Lakescape!5e0!3m2!1sen!2sin!4v1760000158545!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 <div class="col-12 col-md-7 col-lg-7">
@@ -744,7 +834,7 @@ The Key to <span class="sp2">Grandeur</span><br>Revealing the Exceptional
         </div>
         
         </div>
-        <div class="sbt-btn">
+        <div class="sbt-btn" id="btn-sbt">
           <button id="">Enquire Now</button>
       </div>
     </form>
@@ -881,11 +971,12 @@ Copyright © 2025 | Candeur Constructions Pvt.Ltd All rights reserved. | Powered
 </div>
 </div>
 </footer>
-
- <div class="back-to-top" id="backToTop">
+<button id="scrollTopBtn" title="Go to top"><span> <i class="fas fa-arrow-up"></i
+    ></span></button>
+ <!-- <div class="back-to-top" id="backToTop">
   <span> <i class="fas fa-arrow-up"></i
     ></span>
-</div>
+</div> -->
 
 <!-- <div class="back-to-whatsapp" id="backToWhatsapp">
   <span><a href=""><img src="images/whatsappbubble-icon.png" alt="whatsapp" loading="lazy" style="width:40px ;position: relative ; z-index:9999;"></a></span>
@@ -904,7 +995,7 @@ Copyright © 2025 | Candeur Constructions Pvt.Ltd All rights reserved. | Powered
 
 
 
-
+<script src="script.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -935,7 +1026,7 @@ Copyright © 2025 | Candeur Constructions Pvt.Ltd All rights reserved. | Powered
       nav: true,
       dots: false,
       autoplay: true,
-      autoplayTimeout: 3500,
+      autoplayTimeout: 3000,
       autoplayHoverPause: true,
       responsive: {
         0: { items: 1 },
@@ -1036,23 +1127,23 @@ function changeImage(imageSrc, element) {
 
 </script>
 <script>
-  const backToTopButton = document.getElementById("backToTop");
+//   const backToTopButton = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    // Show after scrolling 200px
-    backToTopButton.classList.add("show");
-  } else {
-    backToTopButton.classList.remove("show");
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 100) {
+//     // Show after scrolling 200px
+//     backToTopButton.classList.add("show");
+//   } else {
+//     backToTopButton.classList.remove("show");
+//   }
+// });
 
-backToTopButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+// backToTopButton.addEventListener("click", () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// });
   </script>
 <script>
   const navbar = document.querySelector(".navbar");
@@ -1100,18 +1191,7 @@ window.addEventListener("scroll", () => {
 
 </script>
 <script>
-function toggleReadMore() {
-  const moreText = document.getElementById("moreText");
-  const btn = document.getElementById("readMoreBtn");
 
-  if (moreText.style.display === "none") {
-    moreText.style.display = "inline";
-    btn.textContent = "Read Less";
-  } else {
-    moreText.style.display = "none";
-    btn.textContent = "Read More";
-  }
-}
 </script>
 
 
@@ -1157,7 +1237,8 @@ function toggleReadMore() {
   data-bot="26629211" 
   defer>
 </script>
-<script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script>
 AOS.init({
   duration: 1000,
   once: true,
@@ -1165,7 +1246,17 @@ AOS.init({
   disable: window.innerWidth < 768
 });
 window.addEventListener('load', () => AOS.refresh());
-</script>
+</script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Fancybox JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
