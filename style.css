@@ -1260,6 +1260,11 @@ ul {
   border-right: 0 solid #000;
   animation: typing 3s steps(30, end), blink 0s step-end infinite alternate;
 }
+.w-100 {
+  aspect-ratio: 4 / 3; /* Example: 700x525 → 4:3 ratio */
+  width: 100%!important;
+  height: auto;
+}
 .accordion {
   width: 100%;
   max-width: 600px;
@@ -1587,10 +1592,10 @@ ul {
   #kenytChatBubble.style1 {
     display: none !important;
   }
-  #scrollTopBtn{
+  #scrollTopBtn {
     display: none;
   }
-  .desktop-btns{
+  .desktop-btns {
     display: none;
   }
 }
