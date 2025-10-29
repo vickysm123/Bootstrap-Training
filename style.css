@@ -1262,7 +1262,7 @@ ul {
 }
 .w-100 {
   aspect-ratio: 4 / 3; /* Example: 700x525 → 4:3 ratio */
-  width: 100%!important;
+  width: 100% !important;
   height: auto;
 }
 .accordion {
@@ -1598,6 +1598,13 @@ ul {
   .desktop-btns {
     display: none;
   }
+  .carousel-inner img {
+  aspect-ratio: 16 / 9; /* Example ratio, adjust to match your actual image */
+  width: 100%!important;
+  height: auto;
+  display: block!important;
+}
+
 }
 @media (max-width: 768px) {
   .owl-carousel .item img {
