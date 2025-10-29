@@ -78,6 +78,9 @@ button {
   cursor: pointer;
   border: none;
 }
+.desktop-btns{
+display: none;
+}
 #kenytChatBubble.style1 #kenytBubbleContainer {
   display: flex;
   flex-direction: column;
