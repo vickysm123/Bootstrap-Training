@@ -914,11 +914,11 @@ input {
   text-transform: uppercase;
 }
 .owl-nav {
-  position: absolute;
-  top: -50px;
-  right: 10px;
-  display: flex;
-  gap: 10px;
+    position: absolute;
+    right: 24px;
+    display: flex;
+    gap: 10px;
+    bottom: 67%;
 }
 .owl-nav button {
   background: none !important;
