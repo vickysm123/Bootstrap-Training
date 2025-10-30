@@ -78,9 +78,7 @@ button {
   cursor: pointer;
   border: none;
 }
-.desktop-btns{
-display: none;
-}
+
 #kenytChatBubble.style1 #kenytBubbleContainer {
   display: flex;
   flex-direction: column;
@@ -120,6 +118,9 @@ display: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   animation: pulse-glow 1.5s infinite alternate;
+}
+.contact-button{
+  display: none;
 }
 .contact-button,
 .contact-button__icon,
@@ -1334,6 +1335,9 @@ ul {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #dee2e6;
 }
+.desktop-btns{
+  display: none;
+}
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
@@ -1602,12 +1606,11 @@ ul {
     display: none;
   }
   .carousel-inner img {
-  aspect-ratio: 16 / 9; /* Example ratio, adjust to match your actual image */
-  width: 100%!important;
-  height: auto;
-  display: block!important;
-}
-
+    aspect-ratio: 16 / 9; /* Example ratio, adjust to match your actual image */
+    width: 100% !important;
+    height: auto;
+    display: block !important;
+  }
 }
 @media (max-width: 768px) {
   .owl-carousel .item img {
